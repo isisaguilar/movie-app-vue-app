@@ -13,6 +13,12 @@
         <label>Year:</label>
         <input type="text" v-model="newMovieParams.year" />
       </div>
+      <div>
+        <label>Plot:</label>
+        <input type="text" v-model="newMovieParams.plot" />
+        <br />
+        <small> {{ 50 - newMovieParams.plot.length }}charecters left </small>
+      </div>
       <input type="submit" value="Create" />
     </form>
   </div>
@@ -24,8 +30,11 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      newMovieParams: {},
+      newMovieParams: {
+        plot: "",
+      },
       errors: [],
+      plot: "",
     };
   },
   methods: {

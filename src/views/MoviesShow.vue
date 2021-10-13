@@ -2,6 +2,7 @@
   <div class="movies-show">
     <h2>{{ movie.title }}</h2>
     <p>{{ movie.year }}</p>
+    <p>{{ movie.plot }}</p>
     <router-link :to="`/${movie.id}/edit`"> Edit </router-link>
   </div>
 </template>
