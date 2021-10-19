@@ -1,5 +1,11 @@
 <template>
-  <div class="login">
+  <div class="login" style="background-color: rgb(112, 196, 186)">
+    <img
+      src="https://www.usd259.org/cms/lib/KS01906405/Centricity/Domain/4883/Log%20In%20Meme.jpg"
+      alt="log in meme"
+      width="300"
+      height="300"
+    />
     <form v-on:submit.prevent="submit()">
       <h1>Login</h1>
       <ul>

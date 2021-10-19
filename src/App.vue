@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="background-color: rgb(181, 73, 54)">
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
@@ -9,7 +9,7 @@
         <router-link to="/signup">Signup</router-link> |
       </span>
       <span v-if="!isLoggedIn()">
-        <router-link to="/login">Login</router-link>
+        <router-link to="/login">Login</router-link> |
       </span>
 
       <router-link to="/logout">Logout</router-link>

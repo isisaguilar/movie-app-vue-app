@@ -1,5 +1,5 @@
 <template>
-  <div class="movies-show">
+  <div class="movies-show" style="background-color: rgb(122, 61, 227)">
     <h2>{{ movie.title }}</h2>
     <p>{{ movie.year }}</p>
     <p>{{ movie.plot }}</p>

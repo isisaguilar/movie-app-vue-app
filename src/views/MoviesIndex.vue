@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" style="background-color: rgb(52, 235, 94)">
     <h1>Movies</h1>
     <div>
       <button v-on:click="sortAttribute">Sort Alphabetically</button>
@@ -29,7 +29,9 @@
         <h2>
           Movie: <br />
           {{ movie.title }}
-          <router-link :to="`/movies/${movie.id}`">See Details</router-link>
+          <router-link style="color: white" :to="`/movies/${movie.id}`"
+            >See Details</router-link
+          >
         </h2>
       </div>
     </div>

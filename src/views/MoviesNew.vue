@@ -1,5 +1,5 @@
 <template>
-  <div class="movies-new">
+  <div class="movies-new" style="color: white">
     <form v-on:submit.prevent="createMovie()">
       <h1>Create New Movie</h1>
       <ul>
@@ -21,6 +21,12 @@
       </div>
       <input type="submit" value="Create" />
     </form>
+    <img
+      src="https://c.tenor.com/gQf-Nf3he8cAAAAd/cat-typing.gif"
+      alt="cat typing meme"
+      width="300"
+      height="300"
+    />
   </div>
 </template>
 

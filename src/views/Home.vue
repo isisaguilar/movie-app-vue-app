@@ -1,14 +1,22 @@
 <template>
   <div class="home">
     <h1>Movies</h1>
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlTgq6O8f0cGQMUZswl5FZdo0Q5ftt054mVQ&usqp=CAU"
+      alt="movie meme"
+      width="300"
+      height="300"
+    />
     <div v-for="movie in movies" v-bind:key="movies.id">
-      <h2>Movie: {{ movie.title }} {{ movie.year }}</h2>
+      <h2 style="border: 2px solid Tomato">
+        Movie: {{ movie.title }} {{ movie.year }}
+      </h2>
     </div>
-    <div>
+    <div style="border: 5px solid DodgerBlue">
       Title:
       <input type="text" v-model="newMovie.title" />
     </div>
-    <div>
+    <div style="border: 5px solid DodgerBlue">
       Year:
       <input type="text" v-model="newMovie.year" />
     </div>
