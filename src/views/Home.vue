@@ -7,10 +7,29 @@
       width="300"
       height="300"
     />
+    <br />
     <div v-for="movie in movies" v-bind:key="movies.id">
-      <h2 style="border: 2px solid Tomato">
-        Movie: {{ movie.title }} {{ movie.year }}
-      </h2>
+      <div class="container">
+        <h2>
+          Movie: <br />
+          {{ movie.title }}
+        </h2>
+        <div class="card text-center mx-auto" style="width: 18rem">
+          <router-link :to="`/movies/${movie.id}`">
+            <img
+              src="https://i.ytimg.com/vi/h_LGCQ8Wwy0/maxresdefault.jpg"
+              class="card-img-top"
+              alt="spongebob at the movies"
+            />
+          </router-link>
+          <div class="card-body">
+            <h5 class="card-title">{{ movie.year }}</h5>
+            <p class="card-text">
+              {{ movie.plot }}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <div style="border: 5px solid DodgerBlue">
       Title:

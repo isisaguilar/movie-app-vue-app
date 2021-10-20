@@ -4,10 +4,9 @@
     <div>
       <button v-on:click="sortAttribute">Sort Alphabetically</button>
     </div>
-    <!-- <div
-      v-for="movie in orderBy(filterBy(movies, titleFilter, 'title'), 'title')"
-      v-bind:key="movie.id"
-    ></div> -->
+    <!-- views/MoviesIndex.vue
+    <div v-for="movie in orderBy(filterBy(movies, titleFilter, 'title'), 'title')" v-bind:key="movie.id"></div> -->
+
     Search by name:
     <input v-model="titleFilter" list="titles" />
     <datalist id="titles">
@@ -25,15 +24,18 @@
       )"
       v-bind:key="movie.id"
     >
-      <div v-for="movie in movies" v-bind:key="movies.id">
-        <h2>
-          Movie: <br />
-          {{ movie.title }}
-          <router-link style="color: white" :to="`/movies/${movie.id}`"
-            >See Details</router-link
-          >
-        </h2>
-      </div>
+      <h2>
+        Movie: <br />
+        {{ movie.title }}
+        <br />
+        <router-link
+          style="color: white"
+          type="button"
+          class="btn btn-warning"
+          :to="`/movies/${movie.id}`"
+          >See Details</router-link
+        >
+      </h2>
     </div>
   </div>
 </template>
@@ -49,6 +51,7 @@ export default {
   data: function () {
     return {
       movies: [],
+      titleFilter: "",
       sortAttribute: "title",
     };
   },

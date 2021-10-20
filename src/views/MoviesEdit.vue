@@ -13,8 +13,14 @@
         <label>Year:</label>
         <input type="text" v-model="updateMovieParams.year" />
       </div>
+      <div>
+        <label>Plot:</label>
+        <input type="text" v-model="updateMovieParams.plot" />
+      </div>
       <input type="submit" value="Update" />
-      <button v-on:click="destroyMovie()">Delete</button>
+      <button v-on:click="destroyMovie()" type="button" class="btn btn-warning">
+        Delete
+      </button>
     </form>
   </div>
 </template>

@@ -1,9 +1,14 @@
 <template>
-  <div class="movies-show" style="background-color: rgb(122, 61, 227)">
-    <h2>{{ movie.title }}</h2>
-    <p>{{ movie.year }}</p>
-    <p>{{ movie.plot }}</p>
-    <router-link :to="`/${movie.id}/edit`"> Edit </router-link>
+  <div class="movies-show">
+    <h2>Title: {{ currentMovie.title }}</h2>
+    <p>Year: {{ currentMovie.year }}</p>
+    <p>Plot: {{ currentMovie.plot }}</p>
+    <router-link
+      type="button"
+      class="btn btn-info"
+      :to="`/movies/${currentMovie.id}/edit`"
+      >Edit Movie</router-link
+    >
   </div>
 </template>
 
@@ -12,13 +17,13 @@ import axios from "axios";
 export default {
   data: function () {
     return {
-      movie: {},
+      currentMovie: {},
     };
   },
   created: function () {
-    axios.get(`/${this.$route.params.id}`).then((response) => {
+    axios.get(`/one_movie/${this.$route.params.id}`).then((response) => {
       console.log(response.data);
-      this.movie = response.data;
+      this.currentMovie = response.data;
     });
   },
   methods: {},
